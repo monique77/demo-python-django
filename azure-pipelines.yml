@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '8f254dad-b180-4cb0-878b-21843afdda0d'
-  imageRepository: 'moniquepipelinesdemopythondjango'
+  imageRepository: 'monique77azuredemo-python-django'
   containerRegistry: 'mycontainerregistryus.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'monique77pipelinesdemopythondjango.default'
+    environment: 'monique77azuredemo-python-django.default'
     strategy:
       runOnce:
         deploy:
@@ -86,7 +86,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'monique77pipelinesdemopythondjango.$(k8sNamespaceForPR)'
+    environment: 'monique77azuredemo-python-django.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
