@@ -1,3 +1,4 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.6
-RUN pip install python3
+RUN apt install python3
+ADD /admin /app
 
