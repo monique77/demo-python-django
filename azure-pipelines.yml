@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'monique77azurevotingappredis.default'
+    environment: 'monique77demo-python-django.default'
     strategy:
       runOnce:
         deploy:
